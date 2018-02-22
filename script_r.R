@@ -44,11 +44,8 @@ library(lme4)
 methods(sigma)
 library(caret)
 
+?train
 
-
-
-
-
-
-lm1 <- train(Historico_Treinamento, data = pso, method = "lm")
+lm1 <- train(Historico_Treinamento$co + Historico, data = pso, method = "lm")
+lm2 <- train(Historico_Treinamento, data = pso, method = "lm")
 
